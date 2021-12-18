@@ -29,9 +29,7 @@
 <div class="wrapper">
 
   <!-- Preloader -->
-  <div class="preloader flex-column justify-content-center align-items-center">
-    Tunggu Sebentar...
-  </div>
+  <div class="preloader flex-column justify-content-center align-items-center"></div>
 
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
