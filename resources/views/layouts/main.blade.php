@@ -161,6 +161,7 @@
 <script src="{{ asset('plugins/sweetalert2/sweetalert2.all.min.js') }}"></script>
 
 <script src="{{ asset('assets/script.js') }}"></script>
+
 @stack ('js')
 
 </body>

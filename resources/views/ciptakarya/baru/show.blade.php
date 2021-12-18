@@ -8,6 +8,34 @@
 
     @include ('layouts.components.flash')
 
+    <div id="modal-maps" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Lokasi</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                <iframe 
+                    width="100%" 
+                    height="450" 
+                    frameborder="0" 
+                    scrolling="no" 
+                    marginheight="0" 
+                    marginwidth="0" 
+                    src="https://maps.google.com/maps?q={{ $lokasi_maps }}&hl=en&z=16&amp;output=embed"
+                >
+                </iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="accordion">
 
         <div class="card card-primary card-outline">
@@ -100,6 +128,7 @@
                     Bangunan
                 </h4>
                 <div class="card-tools">
+                    <a href="#" class="btn btn-info btn-sm" data-toggle="modal" data-target="#modal-maps"><i class="fas fa-map-marker"></i> Lokasi</a>
                     <a href="{{ route('baru-edit-satu', $item->id) }}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
                 </div>
             </div>

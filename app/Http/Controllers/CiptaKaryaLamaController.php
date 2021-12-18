@@ -143,13 +143,16 @@ class CiptaKaryaLamaController extends Controller
             return $it->nama === 'file_imb';
         })->first();
 
+        $lokasi_maps = $item->lat_long;
+
         return view('ciptakarya.lama.show')->with([
             'item' => $item,
             'total_ketentuan' => $total_ketentuan,
             'foto_bangunan' => $foto_bangunan,
             'file_surat_kepemilikan_bangunan' => $file_surat_kepemilikan_bangunan,
             'file_gambar_ded' => $file_gambar_ded,
-            'file_imb' => $file_imb
+            'file_imb' => $file_imb,
+            'lokasi_maps' => $lokasi_maps
         ]);
     }
 
