@@ -833,6 +833,46 @@ class CiptaKaryaLamaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::beginTransaction();
+        try {
+            $item = Bangunan::find($id);
+
+            if ($item === null) {
+                session()->flash('flash', [
+                    'message' => 'Data Tidak Ditemukan',
+                    'type' => 'danger'
+                ]);
+
+                return redirect()->back();
+            }
+
+            $item->saranaBangunan()->delete();
+            $item->ciptaKarya()->delete();
+
+            foreach ($item->bangunanUpload as $bangunanUpload) {
+                Storage::disk('public_uploads')->delete($bangunanUpload->name .'/'. $bangunanUpload->file);
+                $bangunanUpload->delete();
+            }
+
+            $item->delete();
+
+            DB::commit();
+
+            session()->flash('flash', [
+                'message' => 'Data Berhasil Dihapus',
+                'type' => 'success'
+            ]);
+
+            return redirect()->back();
+        } catch (Exception $e) {
+            DB::rollBack();
+
+            session()->flash('flash', [
+                'message' => $e->getMessage(),
+                'type' => 'danger'
+            ]);
+        }
+
+        return redirect()->back();
     }
 }

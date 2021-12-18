@@ -33,9 +33,9 @@ class CiptaKaryaController extends Controller
         $harga_rumah_non_standar = $harga_rumah + (($harga_rumah * 150) / 100);
 
         $total = $harga_rumah * $lebar;
-        $total_pagar_depan = $pagar_depan * $depan;
-        $total_pagar_belakang = $pagar_belakang * $belakang;
-        $total_pagar_samping = $pagar_samping * $samping;
+        $total_pagar_depan = $panjang_depan * $depan;
+        $total_pagar_belakang = $panjang_belakang * $belakang;
+        $total_pagar_samping = $panjang_samping * $samping;
 
         $total_non_standar = $harga_rumah_non_standar * $lebar;
         $total_pagar_depan_non_standar = $panjang_depan * $depan_non_standar;
