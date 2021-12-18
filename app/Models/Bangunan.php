@@ -73,6 +73,15 @@ class Bangunan extends Model
         'catatan'
     ];
 
+    public function getRekomendasiFormatAttribute() {
+        switch ($this->rekomendasi) {
+            case 'rekomendasi': return 'REKOMENDASI';
+            case 'tidak_rekomendasi': return 'TIDAK REKOMENDASI';
+        }
+
+        return null;
+    }
+
     public function saranaBangunan() {
         return $this->hasOne(SaranaBangunan::class, 'bangunan_id');
     }

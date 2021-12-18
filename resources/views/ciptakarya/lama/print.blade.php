@@ -22,6 +22,7 @@
         th, td {
             font-size: 15pt;
             padding: 5px;
+            vertical-align: top;
         }
 
         .fonts{
@@ -65,45 +66,45 @@
                             <td>
                                 <table>
                                     <tr>
-                                        <th>Jenis</th>
-                                        <td style="padding-left: 20px"> : </td>
-                                        <td style="padding-left: 20px; padding-bottom: 5px">
-                                            {{ ucwords($item->jenis) }}
-                                        </td>
-                                    </tr>
-                                    <tr>
                                         <th>Tipe</th>
                                         <td style="padding-left: 20px"> : </td>
                                         <td style="padding-left: 20px; padding-bottom: 5px">
-                                            {{ $item->tipe_format }}
+                                            Bangunan {{ ucwords($item->jenis) }}
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>Lebar</th>
+                                        <th>Nama</th>
                                         <td style="padding-left: 20px"> : </td>
                                         <td style="padding-left: 20px; padding-bottom: 5px">
-                                            {{ number_format($item->lebar) }} m<sup>2</sup>
+                                            {{ $item->nama_bangunan }}
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>Pagar Depan</th>
+                                        <th>Jenis</th>
                                         <td style="padding-left: 20px"> : </td>
                                         <td style="padding-left: 20px; padding-bottom: 5px">
-                                            {{ number_format($item->pagar_depan) }} m
+                                            {{ $item->jenis_bangunan }}
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>Pagar Belakang</th>
+                                        <th>Alamat</th>
                                         <td style="padding-left: 20px"> : </td>
                                         <td style="padding-left: 20px; padding-bottom: 5px">
-                                            {{ number_format($item->pagar_belakang) }} m
+                                            {{ $item->alamat }}
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>Pagar Samping</th>
+                                        <th>No Telepon</th>
                                         <td style="padding-left: 20px"> : </td>
                                         <td style="padding-left: 20px; padding-bottom: 5px">
-                                            {{ number_format($item->pagar_samping) }} m
+                                            {{ $item->no_telepon }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Tahun Bangun</th>
+                                        <td style="padding-left: 20px"> : </td>
+                                        <td style="padding-left: 20px; padding-bottom: 5px">
+                                            {{ $item->tahun_bangun }}
                                         </td>
                                     </tr>
                                 </table>
@@ -111,45 +112,38 @@
                             <td>
                                 <table>
                                     <tr>
-                                        <th>Harga</th>
+                                        <th>Lat/Long</th>
                                         <td style="padding-left: 20px"> : </td>
                                         <td style="padding-left: 20px; padding-bottom: 5px">
-                                            Rp. {{ number_format($harga) }}
+                                            {{ $item->lat_long }}
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>Harga Pagar Depan</th>
+                                        <th>Koordinat DMS</th>
                                         <td style="padding-left: 20px"> : </td>
                                         <td style="padding-left: 20px; padding-bottom: 5px">
-                                            Rp. {{ number_format($total_pagar_depan) }}
+                                            {{ $item->koordinat_dms }}
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>Harga Pagar Belakang</th>
+                                        <th>Koordinator UTM</th>
                                         <td style="padding-left: 20px"> : </td>
                                         <td style="padding-left: 20px; padding-bottom: 5px">
-                                            Rp. {{ number_format($total_pagar_belakang) }}
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>Harga Pagar Samping</th>
-                                        <td style="padding-left: 20px"> : </td>
-                                        <td style="padding-left: 20px; padding-bottom: 5px">
-                                            Rp. {{ number_format($total_pagar_samping) }}
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <th>Total Harga</th>
-                                        <td style="padding-left: 20px"> : </td>
-                                        <td style="padding-left: 20px; padding-bottom: 5px">
-                                            Rp. {{ number_format($total) }}
+                                            {{ $item->koordinat_utm }}
                                         </td>
                                     </tr>
                                 </table>
                             </td>
                         </tr>
                     </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        Data bangunan diatas telah melewati verifikasi dengan hasil <strong>{{ $item->rekomendasi_format }}</strong> serta memiliki klasifikasi <strong>{{ $item->klasifikasi }}</strong> sehingga data bangunan diatas
+                        <strong>{{ $item->rekomendasi === 'rekomendasi' ? 'Layak' : 'Belum Layak' }} untuk mengajukan Sertifikat Laik Fungsi (SLF)</strong>
+                    </div>
                 </td>
             </tr>
         </table>

@@ -875,4 +875,23 @@ class CiptaKaryaLamaController extends Controller
 
         return redirect()->back();
     }
+
+    public function print ($id)
+    {
+        try {
+            $item = Bangunan::find($id);
+
+            if ($item === null) {
+                return 'Data Tidak Ditemukan';
+            }
+
+            $view = [
+                'item' => $item
+            ];
+    
+            return view('ciptakarya.lama.print')->with($view);
+        } catch (Exception $e) {
+            return 'Proses Print Gagal';
+        }
+    }
 }

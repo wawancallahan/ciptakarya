@@ -653,5 +653,17 @@
             </div>
         </div>
 
+        <div class="card card-primary card-outline">
+            <div class="card-header">
+                <h4 class="card-title">
+                    Print
+                </h4>
+            </div>
+
+            <div class="card-body">
+                <a target="_blank" href="{{ route('lama-print', $item->id) }}" class="btn btn-info btn-sm"><i class="fas fa-print"></i> Buat Laporan</a>
+            </div>
+        </div>
+
     </div>
 @endsection
