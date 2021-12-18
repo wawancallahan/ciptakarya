@@ -64,7 +64,7 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
-        <li class="nav-item">
+          <li class="nav-item">
             <a href="{{ route('dashboard') }}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
@@ -95,6 +95,15 @@
                 </a>
               </li>
             </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="{{ route('logout') }}" class="nav-link">
+              <i class="nav-icon fa fa-sign-out-alt"></i>
+              <p>
+                Logout
+              </p>
+            </a>
           </li>
         </ul>
       </nav>
@@ -127,7 +136,7 @@
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>The Application by Reza Irawan Ahman, ST</strong>
+    <strong>Sistem Aplikasi Verifikasi Bangunan Gedung Berbasis Web dan Citra Satelit (SI SIMBANG) by Reza Irawan Ahman, ST</strong>
   </footer>
 </div>
 <!-- ./wrapper -->

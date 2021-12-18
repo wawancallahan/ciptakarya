@@ -46,7 +46,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/ciptakaryalama/update/{id}/rekomendasi', [App\Http\Controllers\CiptaKaryaLamaController::class, 'updateRekomendasi'])->name('lama-update-rekomendasi');
     Route::get('/ciptakaryalama/edit/{id}/catatan', [App\Http\Controllers\CiptaKaryaLamaController::class, 'editCatatan'])->name('lama-edit-catatan');
     Route::post('/ciptakaryalama/update/{id}/catatan', [App\Http\Controllers\CiptaKaryaLamaController::class, 'updateCatatan'])->name('lama-update-catatan');
-    
+    Route::get('/ciptakaryalama/print/{id}', [App\Http\Controllers\CiptaKaryaLamaController::class, 'print'])->name('lama-print');
+
     Route::get('/ciptakaryabaru/edit/{id}/bangunan', [App\Http\Controllers\CiptaKaryaBaruController::class, 'editSatu'])->name('baru-edit-satu');
     Route::post('/ciptakaryabaru/update/{id}/bangunan', [App\Http\Controllers\CiptaKaryaBaruController::class, 'updateSatu'])->name('baru-update-satu');
     Route::get('/ciptakaryabaru/edit/{id}/persyaratan-administrasi', [App\Http\Controllers\CiptaKaryaBaruController::class, 'editDua'])->name('baru-edit-dua');
@@ -64,5 +65,6 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/ciptakaryabaru/edit/{id}/rekomendasi', [App\Http\Controllers\CiptaKaryaBaruController::class, 'editRekomendasi'])->name('baru-edit-rekomendasi');
     Route::post('/ciptakaryabaru/update/{id}/rekomendasi', [App\Http\Controllers\CiptaKaryaBaruController::class, 'updateRekomendasi'])->name('baru-update-rekomendasi');
     Route::get('/ciptakaryabaru/edit/{id}/catatan', [App\Http\Controllers\CiptaKaryaBaruController::class, 'editCatatan'])->name('baru-edit-catatan');
-    Route::post('/ciptakaryabaru/update/{id}/catatan', [App\Http\Controllers\CiptaKaryaBaruController::class, 'updateCatatan'])->name('baru-update-catatan');    
+    Route::post('/ciptakaryabaru/update/{id}/catatan', [App\Http\Controllers\CiptaKaryaBaruController::class, 'updateCatatan'])->name('baru-update-catatan'); 
+    Route::get('/ciptakaryabaru/print/{id}', [App\Http\Controllers\CiptaKaryaBaruController::class, 'print'])->name('baru-print');   
 });

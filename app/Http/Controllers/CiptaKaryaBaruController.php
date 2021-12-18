@@ -32,7 +32,7 @@ class CiptaKaryaBaruController extends Controller
      */
     public function index()
     {
-        $items = Bangunan::where('jenis', 'baru')->paginate(10);
+        $items = Bangunan::where('jenis', 'baru')->latest()->paginate(10);
 
         return view('ciptakarya.baru.index')->with([
             'items' => $items
