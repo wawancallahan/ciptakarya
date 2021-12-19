@@ -690,7 +690,7 @@
             </div>
 
             <div class="card-body">
-                <a target="_blank" href="{{ route('baru-print', $item->id) }}" class="btn btn-info btn-sm"><i class="fas fa-print"></i> Buat Laporan</a>
+                <a target="_blank" href="{{ route('lama-print', $item->id) }}" class="btn btn-info btn-sm"><i class="fas fa-print"></i> Buat Laporan</a>
             </div>
         </div>
 
