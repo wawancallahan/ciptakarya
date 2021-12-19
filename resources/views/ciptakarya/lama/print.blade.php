@@ -141,7 +141,7 @@
             <tr>
                 <td>
                     <div>
-                        Data bangunan diatas telah melewati verifikasi dengan hasil <strong>{{ $item->rekomendasi_format }}</strong> serta memiliki klasifikasi <strong>{{ $item->klasifikasi }}</strong> sehingga data bangunan diatas
+                        Data bangunan diatas telah melewati verifikasi dengan hasil <strong>{{ $item->rekomendasi_format }}</strong> serta memiliki klasifikasi <strong>{{ $item->klasifikasi }}</strong>, dan data bangunan diatas
                         <strong>{{ $item->rekomendasi === 'rekomendasi' ? 'Layak' : 'Belum Layak' }} untuk mengajukan Sertifikat Laik Fungsi (SLF)</strong>
                     </div>
                 </td>
