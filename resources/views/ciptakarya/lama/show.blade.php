@@ -235,22 +235,22 @@
                     <hr>
                     <div class="row">
                         <p class="col-sm-4">Koefisien Dasar Bangunan (KDB)</p>
-                        <p class="col-sm-8">{{ number_format($total_ketentuan['kdb'] ?? 0) }}</p>
+                        <p class="col-sm-8">{{ number_format($total_ketentuan['kdb'] ?? 0, 2) }}</p>
                     </div>
 
                     <div class="row">
                         <p class="col-sm-4">Koefisien Lantai Bangunan (KLB)</p>
-                        <p class="col-sm-8">{{ number_format($total_ketentuan['klb'] ?? 0) }}</p>
+                        <p class="col-sm-8">{{ number_format($total_ketentuan['klb'] ?? 0, 2) }}</p>
                     </div>
 
                     <div class="row">
                         <p class="col-sm-4">Koefisien Daerah Hijau (KDH)</p>
-                        <p class="col-sm-8">{{ number_format($total_ketentuan['kdh'] ?? 0) }}</p>
+                        <p class="col-sm-8">{{ number_format($total_ketentuan['kdh'] ?? 0, 2) }}</p>
                     </div>
 
                     <div class="row">
                         <p class="col-sm-4">Koefisien Tapak Basemen (KTB)</p>
-                        <p class="col-sm-8">{{ number_format($total_ketentuan['ktb'] ?? 0) }}</p>
+                        <p class="col-sm-8">{{ number_format($total_ketentuan['ktb'] ?? 0, 2) }}</p>
                     </div>
                 </div>
             </div>
