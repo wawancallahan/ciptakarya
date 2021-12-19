@@ -75,11 +75,6 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Lt. Proyeksi</label>
-                    <input type="text" name="lt_proyeksi" class="form-control numeral6" value="{{ $item->lt_proyeksi ?? 0 }}" required>
-                </div>
-
-                <div class="form-group">
                     <label>Luas Lahan Terbuka</label>
                     <input type="text" name="luas_lahan_terbuka" class="form-control numeral7" value="{{ $item->luas_lahan_terbuka ?? 0 }}" required>
                 </div>

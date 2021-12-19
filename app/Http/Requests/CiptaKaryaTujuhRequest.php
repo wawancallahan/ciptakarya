@@ -25,7 +25,7 @@ class CiptaKaryaTujuhRequest extends FormRequest
     {
         return [
             'luas_lahan_terbuka' => 'required',
-            'lt_proyeksi' => 'required',
+            // 'lt_proyeksi' => 'required',
             'luas_tapak_basement' => 'required',
             'luas_seluruh_ruang_terbuka' => 'required',
             'luas_seluruh_lantai' => 'required',

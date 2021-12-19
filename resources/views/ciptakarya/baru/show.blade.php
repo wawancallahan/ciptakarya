@@ -58,7 +58,7 @@
                     </div>
 
                     <div class="form-group row">
-                        <p class="col-sm-4">Lebar</p>
+                        <p class="col-sm-4">Luas</p>
                         <p class="col-sm-8">{{ $item->ciptaKarya->lebar ?? '' }} M^2</p>
                     </div>
 

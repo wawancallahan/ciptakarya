@@ -144,7 +144,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="">Lebar (m^2)</label>
+                    <label for="">Luas (m^2)</label>
                     <input type="text" class="form-control numeral1" name="lebar" required>
                 </div>
 

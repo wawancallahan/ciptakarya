@@ -727,7 +727,7 @@ class CiptaKaryaLamaController extends Controller
                 'luas_seluruh_lantai' => str_replace(',', '', $request->luas_seluruh_lantai),
                 'luas_seluruh_ruang_terbuka' => str_replace(',', '', $request->luas_seluruh_ruang_terbuka),
                 'luas_tapak_basement' => str_replace(',', '', $request->luas_tapak_basement),
-                'lt_proyeksi' => str_replace(',', '', $request->lt_proyeksi),
+                // 'lt_proyeksi' => str_replace(',', '', $request->lt_proyeksi),
                 'luas_lahan_terbuka' => str_replace(',', '', $request->luas_lahan_terbuka),
             ]);
 

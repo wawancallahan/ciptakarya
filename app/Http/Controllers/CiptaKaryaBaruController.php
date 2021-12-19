@@ -211,7 +211,7 @@ class CiptaKaryaBaruController extends Controller
     public function kdb ($item) {
         try {
             if (($item->luas_lahan_terbuka ?? 0) > 0) {
-                return (($item->luas_lantai_dasar ?? 0) - ($item->lt_proyeksi ?? 0)) / ($item->luas_lahan_terbuka ?? 0);
+                return (($item->luas_lantai_dasar ?? 0)) / ($item->luas_lahan_terbuka ?? 0);
             }
         } catch (\DivisionByZeroError $e) {
         }
@@ -775,13 +775,13 @@ class CiptaKaryaBaruController extends Controller
             }
 
             $item->update([
-                'luas_lantai_dasar' => $request->luas_lantai_dasar,
-                'luas_lahan_tanah_perpetakan' => $request->luas_lahan_tanah_perpetakan,
-                'luas_seluruh_lantai' => $request->luas_seluruh_lantai,
-                'luas_seluruh_ruang_terbuka' => $request->luas_seluruh_ruang_terbuka,
-                'luas_tapak_basement' => $request->luas_tapak_basement,
-                'lt_proyeksi' => $request->lt_proyeksi,
-                'luas_lahan_terbuka' => $request->luas_lahan_terbuka,
+                'luas_lantai_dasar' => str_replace(',', '', $request->luas_lantai_dasar),
+                'luas_lahan_tanah_perpetakan' => str_replace(',', '', $request->luas_lahan_tanah_perpetakan),
+                'luas_seluruh_lantai' => str_replace(',', '', $request->luas_seluruh_lantai),
+                'luas_seluruh_ruang_terbuka' => str_replace(',', '', $request->luas_seluruh_ruang_terbuka),
+                'luas_tapak_basement' => str_replace(',', '', $request->luas_tapak_basement),
+                // 'lt_proyeksi' => str_replace(',', '', $request->lt_proyeksi),
+                'luas_lahan_terbuka' => str_replace(',', '', $request->luas_lahan_terbuka),
             ]);
 
             DB::commit();
