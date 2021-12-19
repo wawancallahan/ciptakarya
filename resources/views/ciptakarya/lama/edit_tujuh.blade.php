@@ -26,10 +26,6 @@
                 numeral: true,
                 numeralPositiveOnly: true
             });
-            new Cleave($('.numeral6'), {
-                numeral: true,
-                numeralPositiveOnly: true
-            });
             new Cleave($('.numeral7'), {
                 numeral: true,
                 numeralPositiveOnly: true

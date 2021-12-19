@@ -267,7 +267,7 @@
                     Ketentuan Umum
                 </h4>
                 <div class="card-tools">
-                    <a href="{{ route('lama-edit-tujuh', $item->id) }}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
+                    <a href="{{ route('baru-edit-tujuh', $item->id) }}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
                 </div>
             </div>
             
@@ -643,7 +643,7 @@
                     Klasifikasi
                 </h4>
                 <div class="card-tools">
-                    <a href="{{ route('lama-edit-rekomendasi', $item->id) }}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
+                    <a href="{{ route('baru-edit-rekomendasi', $item->id) }}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
                 </div>
             </div>
             
@@ -671,7 +671,7 @@
                     Catatan
                 </h4>
                 <div class="card-tools">
-                    <a href="{{ route('lama-edit-catatan', $item->id) }}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
+                    <a href="{{ route('baru-edit-catatan', $item->id) }}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
                 </div>
             </div>
             
@@ -690,7 +690,7 @@
             </div>
 
             <div class="card-body">
-                <a target="_blank" href="{{ route('lama-print', $item->id) }}" class="btn btn-info btn-sm"><i class="fas fa-print"></i> Buat Laporan</a>
+                <a target="_blank" href="{{ route('baru-print', $item->id) }}" class="btn btn-info btn-sm"><i class="fas fa-print"></i> Buat Laporan</a>
             </div>
         </div>
 
